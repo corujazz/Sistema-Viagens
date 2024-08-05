@@ -9,16 +9,6 @@ import Destinos from './pages/Destinos';
 import Contato from './pages/Contato';
 
 function App() {
-  const destinos = [
-    { nome: 'Paris', descricao: 'A cidade do amor.' },
-    { nome: 'Nova York', descricao: 'A cidade que nunca dorme.' },
-    { nome: 'Tóquio', descricao: 'A capital do Japão.' }
-  ];
-
-  const adicionarDestino = (novoDestino) => {
-    setDestinos([...destinos, novoDestino]);
-  };
-
   const [paginaAtual, setPaginaAtual] = useState('Home');
 
   const renderPagina = () => {
@@ -43,10 +33,6 @@ function App() {
         <button onClick={() => setPaginaAtual('Contato')}>Contato</button>
       </nav>
       {renderPagina()}
-      <FormDestino adicionarDestino={adicionarDestino} />
-      {destinos.map((destino, index) => (
-        <Destino key={index} nome={destino.nome} descricao={destino.descricao} />
-      ))}
       <Footer />
     </div>
   );
