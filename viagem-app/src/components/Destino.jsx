@@ -1,5 +1,6 @@
 // Destino.jsx
 import React from 'react';
+import '../App.css';
 
 const Destino = ({ nome, descricao }) => {
   return (
