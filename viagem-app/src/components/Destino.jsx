@@ -2,14 +2,19 @@
 import React from 'react';
 import '../App.css';
 
-const Destino = ({ nome, descricao, destino }) => {
+  const Destino = ({ destino, setDestino}) => {
+   
   return (
-    <div>
-      <h2>{nome}</h2>
-      <p>{descricao}</p>
-      <p><strong>Distância: {distancia} km</strong></p>
+    <button onClick={() => setDestino(destino)}>
+    <div className="destino">
+      <p>{destino.nome}</p>
+      <p>{destino.descricao}</p>
+      <p><strong>Distância: {destino.distancia} km</strong></p>
     </div>
+    </button>
   );
+
+  
 };
 
 export default Destino;
