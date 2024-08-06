@@ -29,7 +29,7 @@ const Destinos = () => {
       <div><h2>Destinos</h2><p>Veja nossos destinos incríveis.</p></div>;
       <FormDestino adicionarDestino={adicionarDestino} />
       {destinos.map((destino, index) => (
-        <Destino key={index} nome={destino.nome} descricao={destino.descricao} />
+        <Destino key={index} nome={destino.nome} descricao={destino.descricao} distancia={destino.distancia} />
       ))}
     </div>
   );
